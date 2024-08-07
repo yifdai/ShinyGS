@@ -9,7 +9,7 @@ function stop_container() {
 
       # Run the genoselect container and get its ID
       echo "Starting genoselect container..."
-      container_id=$(docker run -itd -p 4040:4040 -v "$(pwd)":/mount yfd2/ags:1.0.21 /bin/bash)
+      container_id=$(docker run -itd -p 4040:4040 -v "$(pwd)":/mount yfd2/ags:1.0.23 /bin/bash)
       echo "Genoselect container started with ID $container_id"
 
       # Run your R script in the container
@@ -24,7 +24,7 @@ trap stop_container SIGINT
 # Wait for 3 seconds before opening the browser
 sleep 4
 
-# Open a new browser window and navigate to localhost:4141
+# Open a new browser window and navigate to localhost:4040
 if [ -z "$WSL_DISTRO_NAME" ]; then
           # This is not a WSL environment, use `open` to start the browser
             xdg-open http://localhost:4040
@@ -43,3 +43,4 @@ docker logs -f $container_id | while read line ; do
 
                         # To ensure the script exits after stopping the container
                         exit 0
+                        
