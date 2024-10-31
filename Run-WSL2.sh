@@ -9,7 +9,7 @@ function stop_container() {
 
       # Run the genoselect container and get its ID
       echo "Starting genoselect container..."
-      container_id=$(docker run -itd -p 4040:4040 -v "$(pwd)":/mount yfd2/ags:1.0.23 /bin/bash)
+      container_id=$(docker run -itd -p 4040:4040 -v "$(pwd)":/mount yfd2/ags:1.0.24 /bin/bash)
       echo "Genoselect container started with ID $container_id"
 
       # Run your R script in the container
