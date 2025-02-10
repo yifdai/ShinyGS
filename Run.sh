@@ -8,7 +8,7 @@ function stop_container() {
 
 # Run the ShinyGS container and get its ID
 echo "Starting genoselect container..."
-container_id=$(docker run -itd -p 4040:4040 -v "$(pwd)":/mount yfd2/ags:1.1.3 /bin/bash)
+container_id=$(docker run -itd -p 4040:4040 -v "$(pwd)":/mount yfd2/ags:1.1.5 /bin/bash)
 echo "Genoselect container started with ID $container_id"
 
 docker exec $container_id Rscript opt/app/run.R &
