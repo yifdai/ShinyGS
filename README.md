@@ -52,11 +52,3 @@ This will start the ShinyGS app locally in your browser.
 
 ### Version 1.1.4 (2024-12-23)
 - Initial release of ShinyGS
-
-## License
-
-MIT License
-
-## Contact
-
-If you encounter any issues or have feature requests, please open an issue on this GitHub repository.
